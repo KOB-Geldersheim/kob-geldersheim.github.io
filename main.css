@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* globale Styles */
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,27 @@ body {
 .site {
   display: flex;
   flex-direction: column;
+}
+
+button,
+.btn {
+  cursor: pointer;
+  width: 129.76px;
+  padding: 12.32px 0;
+  border-radius: 54px;
+  background-color: #010c3f;
+  text-align: center;
+  font-size: 15px;
+  transition: background-color 0.25s;
+  border: 0px;
+  color: #fff;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #001ea8;
 }
 
 /* header */
@@ -80,19 +102,25 @@ body {
 .navigation {
   min-height: 50px;
 }
-ul {
+.navigation ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start space-evenly;
   text-decoration: none;
 }
-li {
+.navigation li {
   margin: 10px 40px;
   list-style: none;
 }
-a {
+.navigation a {
   text-decoration: none;
   cursor: pointer;
+  color: #000;
+}
+
+.navigation a:hover {
+  color: #010c3f;
+  font-weight: 500;
 }
 
 /* spotlight */
@@ -139,6 +167,7 @@ a {
 .sidebar {
   grid-area: sidebar;
   margin: 0 10px;
+  display: block;
 }
 
 /* Artikel */
@@ -160,6 +189,28 @@ a {
 .article span {
   padding-top: 20px;
   font-weight: lighter;
+}
+
+/* sidebar */
+
+input {
+  width: 75%;
+  padding: 14.08px 0;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  margin-bottom: 16px;
+  color: #010c3f;
+  font-size: 16px;
+  box-shadow: 2px 2px 8px #999;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > * {
+  margin: 5px 0;
 }
 
 /* footer */
@@ -230,8 +281,9 @@ a {
 @media (max-width: 600px) {
   .header {
     height: 10%;
+    min-height: 0;
   }
-  .logo {
+  .logo-wrapper {
     max-width: 50%;
   }
   .wichtige-links {
@@ -319,6 +371,10 @@ a {
   .navigation ul {
     margin-top: 25px;
   }
+
+  .navigation li {
+    margin: 10px 20px;
+  }
   .navigation a {
     display: block;
     transition: 0.3s;
@@ -335,14 +391,23 @@ a {
     justify-content: center;
   }
 
+  .articles {
+    padding: 0 10px 0 15px;
+    margin: 0;
+  }
+
   .sidebar {
     color: #fff;
     background-color: #1facd3;
     width: 100%;
-    margin: 0;
+    padding: 10px 10px;
   }
 
   .footer-container {
     margin-top: 0;
+  }
+
+  .footer {
+    padding: 25px 10px;
   }
 }
